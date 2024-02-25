@@ -1,0 +1,158 @@
+.header{
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+.header__wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo-wrap{
+    display: flex;
+    align-items: center;
+}
+.header__logo{
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: $logo-color;
+    margin-right: 93px;
+}
+.header__black{
+    color: $second-logo-color;
+}
+.header__navigation{
+    font-size: 14px;
+    font-weight: 500;
+}
+.header__site-nav{
+    width: 281px;
+    display: flex;
+    justify-content: space-between;
+    transition-property: color;
+}
+.header__site-nav-link{
+    color: $title-text;
+    position: relative;
+    &:hover{
+        transition-timing-function: $time-function;
+        transition-duration: 250ms;
+        color: $hover-color;
+        cursor: pointer;
+    }
+    // &--current::after{
+    //     content: '';
+    //     display: block;
+    //     background-color: $hover-color;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 2px;
+    //     border-radius: 4px;
+    //     left: 0;
+    //     bottom: -31.7px;
+    //     transition-property: background-color;
+    // }
+}
+// .header__site-nav-link--current::after{
+//     content: '';
+//     display: block;
+//     background-color: $hover-color;
+//     position: absolute;
+//     width: 100%;
+//     height: 2px;
+//     border-radius: 4px;
+//     left: 0;
+//     bottom: -31.7px;
+//     transition-property: background-color;
+// }
+.site-nav-link:hover.current::after{
+    transition-timing-function: $time-function;
+    transition-duration: 250ms;
+    background-color: $dark-hover;
+}
+.header__contacts-link{
+    height: 30px;
+    color: $text-color;
+    display: flex;align-items: center;
+    transition-property: color;
+    
+    &:hover .contacts-icon{
+        fill: $hover-color;
+        animation-duration: 250ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-name: shake;
+    }
+}
+@keyframes shake{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.header__contacts-icon{
+    margin-right: 10px;
+    fill: $text-color;
+    transition-property: fill;
+}
+// .contacts-link:hover .contacts-icon{
+//     fill: $hover-color;
+//     animation-duration: 250ms;
+//     animation-timing-function: linear;
+//     animation-iteration-count: infinite;
+//     animation-name: shake;
+// }
+// @keyframes shake{
+//     0%{
+//         transform: rotate(0deg);
+//     }
+//     25%{
+//         transform: rotate(10deg);
+//     }
+//     50%{
+//         transform: rotate(0deg);
+//     }
+//     75%{
+//         transform: rotate(-10deg);
+//     }
+//     100%{
+//         transform: rotate(0deg);
+//     }
+// }
+.contacts-link:hover,
+.contacts-link:focus{
+    transition-timing-function: $time-function;
+    transition-duration: 250ms;
+    color: $hover-color;
+}
+.contacts{
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts .contacts-link:hover{
+    color: $hover-color;
+}
+.email{
+    margin-right: 50px;
+}
+.container-header{
+    background-color: $second-pouring-color;
+}
+.header-bottom-border{
+    margin-top: 0;
+    margin-bottom: 94px;
+    background-color: $border-color;
+}

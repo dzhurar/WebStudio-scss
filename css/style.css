@@ -1,35 +1,3 @@
-:root{
-    --title-text:#212121;
-    --text-color:#757575;
-    --opposite-color:#FFFFFF;
-    --logo-color:#2196F3;
-    --hover-color:#2196F3;
-    --second-logo-color:#000000;
-    --pouring-color:#2F303A;/*колір заливки*/
-    --second-pouring-color:#F5F4FA;
-    --footer-text:#FFFFFF99;
-    --border-color:#ECECEC;
-    --social-icon: #AFB1B8;
-    --footer-icon-border: #43444d;
-    --icon-fill: #212121;
-    --project-overlay-background: rgba(33, 150, 243, 0.90);
-    --time-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --dark-hover: #1a619c;
-}
-body{
-    font-family: 'Roboto', sans-serif;
-}
-.container{
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-a{
-    cursor: pointer;
-}
-button{
-    cursor: pointer;
-}
 /* header */
 .header{
     padding-top: 24px;
