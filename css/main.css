@@ -89,17 +89,31 @@ button {
 .header__site-nav-link {
   color: #212121;
   position: relative;
-}
-.header__site-nav-link:hover {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
+}
+.header__site-nav-link:hover {
   color: #2196F3;
   cursor: pointer;
 }
 
-.site-nav-link:hover.current::after {
+.current::after {
+  content: "";
+  display: block;
+  background-color: #2196F3;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  left: 0;
+  bottom: -31.7px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.current::after:hover {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-duration: 250ms;
@@ -192,7 +206,7 @@ button {
   color: #2196F3;
 }
 
-.contacts {
+.header__contacts {
   font-size: 14px;
   font-weight: 500;
   display: -webkit-box;
@@ -203,7 +217,7 @@ button {
           justify-content: space-between;
 }
 
-.contacts .contacts-link:hover {
+.header__contacts .header__contacts-link:hover {
   color: #2196F3;
 }
 
