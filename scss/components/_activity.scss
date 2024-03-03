@@ -1,0 +1,31 @@
+.activities{
+    padding-bottom: 94px;
+}
+.activities__title{
+    @extend %section-title;
+}
+.activities__list{
+    @include flex();
+}
+.activities__list-item{
+    position: relative;
+}
+.activities__img{
+    width: 370px;
+    height: 294px;
+}
+.activities__subtitle{
+    letter-spacing: 0.42px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $opposite-color;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 4px;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

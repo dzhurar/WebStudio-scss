@@ -34,14 +34,13 @@
 .header__site-nav-link{
     color: $title-text;
     position: relative;
-    transition-timing-function: $time-function;
-    transition-duration: 250ms;
+    @extend %hover-fill-time;
     &:hover{
         color: $hover-color;
         cursor: pointer;
     }
 }
-.current::after{
+.header__site-nav-link.current::after{
     content: '';
     display: block;
     background-color: $hover-color;
@@ -53,38 +52,23 @@
     bottom: -31.7px;
     transition-property: background-color;
 }
-.current::after:hover{
-    transition-timing-function: $time-function;
-    transition-duration: 250ms;
+.header__site-nav-link:hover.current::after{
+    @extend %hover-fill-time;
     background-color: $dark-hover;
 }
-// .header__site-nav-link--current::after{
-//     content: '';
-//     display: block;
-//     background-color: $hover-color;
-//     position: absolute;
-//     width: 100%;
-//     height: 2px;
-//     border-radius: 4px;
-//     left: 0;
-//     bottom: -31.7px;
-//     transition-property: background-color;
-// }
-// .header_site-nav-link:hover.current::after{
-// }
 .header__contacts-link{
     height: 30px;
     color: $text-color;
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     transition-property: color;
-    
-    &:hover .contacts-icon{
-        fill: $hover-color;
-        animation-duration: 250ms;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-name: shake;
-    }
+}
+.header__contacts-link:hover .header__contacts-icon{
+    fill: $hover-color;
+    animation-duration: 250ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: shake;
 }
 @keyframes shake{
     0%{
@@ -108,36 +92,7 @@
     fill: $text-color;
     transition-property: fill;
 }
-// .contacts-link:hover .contacts-icon{
-//     fill: $hover-color;
-//     animation-duration: 250ms;
-//     animation-timing-function: linear;
-//     animation-iteration-count: infinite;
-//     animation-name: shake;
-// }
-// @keyframes shake{
-//     0%{
-//         transform: rotate(0deg);
-//     }
-//     25%{
-//         transform: rotate(10deg);
-//     }
-//     50%{
-//         transform: rotate(0deg);
-//     }
-//     75%{
-//         transform: rotate(-10deg);
-//     }
-//     100%{
-//         transform: rotate(0deg);
-//     }
-// }
-.contacts-link:hover,
-.contacts-link:focus{
-    transition-timing-function: $time-function;
-    transition-duration: 250ms;
-    color: $hover-color;
-}
+
 .header__contacts{
     font-size: 14px;
     font-weight: 500;
@@ -149,12 +104,4 @@
 }
 .email{
     margin-right: 50px;
-}
-.container-header{
-    background-color: $second-pouring-color;
-}
-.header-bottom-border{
-    margin-top: 0;
-    margin-bottom: 94px;
-    background-color: $border-color;
 }

@@ -1,0 +1,99 @@
+.footer{
+    background-color: $pouring-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.footer__wrap{
+    @include flex();
+}
+.footer__logo{
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: $logo-color;
+}
+.footer__white{
+    color: $opposite-color;
+}
+.footer__list{
+    margin-top: 20px;
+}
+.footer__list-item{
+    margin-bottom: 9px;
+}
+.footer__address{
+    color: $opposite-color;
+    font-weight: 400;
+    font-size: 14px;
+}
+.footer__contact-link{
+    color: $footer-text;
+    font-weight: 400;
+    font-size: 14px;
+}
+.footer__title{
+    color: $opposite-color;
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.footer__social-list{
+    display: flex;
+    gap: 10px;
+}
+.footer__social-link{
+    fill: $opposite-color;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $footer-icon-border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: background-color;
+
+    &:hover,
+    &:focus{
+        @extend %hover-fill-time;
+        background-color: $hover-color;
+    }
+}
+.footer__social-icon{
+    width: 20px;
+    height: 20px;
+}
+.footer__mailing-list-form{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.footer__mailing-list-input{
+    color: $opposite-color;
+    letter-spacing: 1px;
+    padding: 15px;
+    background-color: $pouring-color;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    width: 280px;
+}
+.footer__mailing-list-button{
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    background-color: $hover-color;
+    color: $opposite-color;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.96px;
+}
+.footer__mailing-list-icon{
+    fill: $opposite-color;
+    width: 24px;
+    height: 24px;
+}

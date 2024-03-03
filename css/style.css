@@ -1,3 +1,11 @@
+                            .section-title{
+                                color: var(--title-text);
+                                font-weight: 700;
+                                font-size: 36px;
+                                margin-bottom: 50px;
+                                text-align: center;
+                            }
+
 /* header */
 .header{
     padding-top: 24px;

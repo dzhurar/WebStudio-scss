@@ -1,10 +1,12 @@
 @import './base/colors';
 @import './base/all-styles';
+@import './base/placeholder';
+@import './base/mixin';
 @import './components/header';
 @import './components/hero';
-@import './components/benefits';
+@import './components/advantages';
 @import './components/activity';
 @import './components/team';
 @import './components/clients';
 @import './components/footer';
-@import './components/projects';
+@import './components/portfolio';
