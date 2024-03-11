@@ -2,7 +2,15 @@
     display: none;
 }
 @media screen and (min-width: 1200px){
+    %section-title{
+        color: $title-text;
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
     .activities{
+        display: block;
         padding-bottom: 94px;
     }
     .activities__title{

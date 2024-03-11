@@ -4,7 +4,7 @@
     padding-bottom: 60px;
 }
 .footer__wrap{
-    @include flex();
+    flex-direction: column;
 }
 .footer__logo{
     font-family: 'Raleway', sans-serif;
@@ -68,6 +68,9 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 .footer__mailing-list-input{
     color: $opposite-color;

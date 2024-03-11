@@ -46,15 +46,7 @@ button {
     width: 1200px;
   }
 }
-.team__title {
-  color: title-text;
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.footer__social-link:hover, .footer__social-link:focus, .team__social-link:hover, .team__social-link:focus, .header__site-nav-link:hover.current::after, .header__site-nav-link {
+.footer__social-link:hover, .footer__social-link:focus, .clients__list-link:hover, .clients__list-link:focus, .team__social-link:hover, .team__social-link:focus, .header__site-nav-link:hover.current::after, .header__site-nav-link {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-duration: 250ms;
@@ -418,10 +410,70 @@ button {
   display: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .clients__title, .team__title, .activities__title {
+    color: #212121;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .activities {
+    display: block;
+    padding-bottom: 94px;
+  }
+  .activities__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .activities__list-item {
+    position: relative;
+  }
+  .activities__img {
+    width: 370px;
+    height: 294px;
+  }
+  .activities__subtitle {
+    letter-spacing: 0.42px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 4px;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .team {
   padding-bottom: 60px;
   padding-top: 60px;
   background-color: #F5F4FA;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .team__list-item {
@@ -529,6 +581,49 @@ button {
     height: 260px;
   }
 }
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.clients__list-link {
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  fill: #AFB1B8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-property: border-color, fill;
+  transition-property: border-color, fill;
+}
+.clients__list-link:hover, .clients__list-link:focus {
+  border-color: #2196F3;
+  fill: #2196F3;
+}
+
+.clients__link-icon {
+  width: 106px;
+  height: 60px;
+  padding: 16px 52px;
+}
+
 .footer {
   background-color: #2F303A;
   padding-top: 60px;
@@ -536,12 +631,10 @@ button {
 }
 
 .footer__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer__logo {
@@ -626,6 +719,13 @@ button {
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
 }
 
 .footer__mailing-list-input {

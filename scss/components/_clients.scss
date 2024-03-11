@@ -2,11 +2,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.clients__title{
-    @extend %section-title;
-}
 .clients__list{
     @include flex();
+    flex-wrap: wrap;
 }
 .clients__list-link{
     border: 1px solid $social-icon;
@@ -30,6 +28,11 @@
     padding: 16px 52px;
 }
 
+@media screen and (min-width: 1200px){
+    .clients__title{
+        @extend %section-title;
+    }
+}
 // .clients{
 //     padding-top: 94px;
 // }
