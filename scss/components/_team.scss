@@ -5,10 +5,12 @@
 }
 .team__title{
     @extend %section-title;
+    text-align: center;
 }
 .team__list{
-    @include flex();
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .team__list-item{
     margin-bottom: 30px;

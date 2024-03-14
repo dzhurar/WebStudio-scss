@@ -26,7 +26,7 @@ button {
 }
 
 .container {
-  width: 320px;
+  width: 290px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -331,6 +331,19 @@ button {
   padding-bottom: 60px;
 }
 
+.advantages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .advantages__list-item {
   width: 290px;
 }
@@ -465,15 +478,21 @@ button {
   background-color: #F5F4FA;
 }
 
+.team__title {
+  text-align: center;
+}
+
 .team__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .team__list-item {
