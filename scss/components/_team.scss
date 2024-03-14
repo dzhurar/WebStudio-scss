@@ -4,9 +4,11 @@
     background-color: $second-pouring-color;
 }
 .team__title{
-    @extend %section-title;
+    color: $title-text;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 50px;
     text-align: center;
-    margin-bottom: 30px;
 }
 .team__list{
     display: flex;
@@ -66,10 +68,24 @@
     width: 20px;
     height: 20px;
 }
+@media screen and (min-width: 480px){
+    .team__list-item{
+        width: 450px;
+    }
+    .team__employee-img{
+        width: 450px;
+        height: 460px;
+    }
+    .team__social-list{
+        justify-content: center;
+        gap: 10px;
+    }
+}
 @media screen and (min-width: 768px){
     .team__list{
         @include flex();
         flex-wrap: wrap;
+        flex-direction: row;
     }
     .team__list-item{
         width: 354px;
