@@ -47,9 +47,12 @@
     }
 }
 @media screen and (min-width: 1200px){
+    .clients__list{
+        gap: 0;
+    }
     .clients__link-icon{
-        width: 106px;
-        height: 60px;
+        width: 170px;
+        height: 92px;
         padding: 16px 32px;
     }
 }

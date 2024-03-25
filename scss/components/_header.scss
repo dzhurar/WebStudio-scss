@@ -27,7 +27,7 @@
 }
 .header__site-nav{
     width: 281px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     transition-property: color;
 }
@@ -96,7 +96,7 @@
 .header__contacts{
     font-size: 14px;
     font-weight: 500;
-    display: flex;
+    display: none;
     justify-content: space-between;
 }
 .header__contacts .header__contacts-link:hover{
@@ -104,4 +104,100 @@
 }
 .email{
     margin-right: 50px;
+}
+// mobile-menu
+.header__menu-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 48px 40px;
+    width: 100%;
+    height: 100vh;
+    background-color: $opposite-color;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 4px 8px 0 rgba(0, 0, 0, 0.04);
+    z-index: 999;
+    transform: translateX(100%);
+    transition-duration: 250ms;
+    transition-timing-function: $time-function;
+}
+.header__menu-container.is-open{
+    transform: translateX(0%);
+}
+.header__menu-close{
+    position: absolute;
+    top: 10px;
+    right: 2px;
+    background-color: transparent;
+    border: none;
+}
+.header__menu-open{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+}
+.header__menu-close-icon{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    padding: 0;
+}
+.header__menu-open,
+.header__menu-close-icon{
+    fill: $icon-fill;
+    transition-duration: 250ms;
+    transition-timing-function: $time-function;
+}
+.header__menu-open:active,
+.header__menu-close-icon:active{
+    fill: $hover-color;
+    color: $hover-color;
+}
+.header__menu-box{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+.header__mobile-nav-link{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: $title-text;
+    transition-duration: 250ms;
+    animation-timing-function: $time-function;
+
+    &:hover,
+    &:focus{
+        color: $hover-color;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+    .header__site-nav{
+        display: flex;
+    }
+    .header__contacts{
+        display: flex;
+    }
+    .header__menu-open{
+        display: none;
+    }
+    .header__menu-container{
+        display: none;
+    }
 }

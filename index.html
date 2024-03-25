@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header__wrap">
             <div class="header__logo-wrap">
                 <a class="header__logo" href="index.html">Web<span class="header__black">Studio</span></a>
@@ -47,7 +47,71 @@
                 </li>
             </ul>
         </div>
-    </header> -->
+        <!-- mobile-menu -->
+        <button class="header__menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            svgcum class="header__menu-open-svg"
+        </button>
+        <div class="header__menu-container js-menu-container" id="mobile-menu">
+            <button type="button" class="header__menu-close js-close-menu">
+                <svg class="header__menu-close-icon">
+                    <use href="./img/modal-icons.svg#icon-x"></use>
+                </svg>
+            </button>
+            <div class="header__menu-box">
+                <div class="header__mobile-menu">
+                    <nav class="header__mobile-nav">
+                        <ul class="header__mobile-nav-list">
+                            <li class="header__mobile-nav-item">
+                                <a class="header__mobile-nav-link" href="index.html">Студія</a>
+                            </li>
+                            <li class="header__mobile-nav-item">
+                                <a class="header__mobile-nav-link" href="portfolio.html">Портфоліо</a>
+                            </li>
+                            <li class="header__mobile-nav-item">
+                                <a class="header__mobile-nav-link" href="#">Контакти</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__mobile-socials">
+                    <ul class="header__mobile-contacts">
+                        <li class="header__mobile-contacts-item">
+                            <a class="header__mobile-contacts-tel" href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="header__mobile-contacts-item">
+                            <a class="header__mobile-contacts-mail" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__mobile-socials">
+                        <li class="header__mobile-socials-item">
+                            <a href="#" class="header__mobile-socials-link">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="header__mobile-socials-item">
+                            <a href="#" class="header__mobile-socials-link">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="header__mobile-socials-item">
+                            <a href="#" class="header__mobile-socials-link">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="header__mobile-socials-item">
+                            <a href="#" class="header__mobile-socials-link">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="main">
         <!--hero-->
             <section class="hero">
@@ -60,7 +124,7 @@
                     </div>
                 </div>
                     <!-- modal window -->
-                <!-- <div class="hero__backdrop hero__is-hidden" data-modal>
+                <div class="hero__backdrop hero__is-hidden" data-modal>
                     <div class="hero__modal">
                         <button type="button" class="hero__close-modal" data-modal-close>
                             <svg class="hero__modal-form-icon-x">
@@ -101,7 +165,7 @@
                             <button type="submit" class="hero__agree-button">Відправити</button>
                         </form>
                     </div>
-                </div> -->
+                </div>
             </section> 
                 <!--advantages-->
             <section class="advantages">
