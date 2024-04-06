@@ -1,7 +1,8 @@
 .header{
     padding-top: 24px;
     padding-bottom: 25px;
-    
+    display: flex;
+    justify-content: space-between;
 }
 .header__wrap{
     display: flex;
@@ -137,6 +138,11 @@
     border: none;
     margin-left: auto;
 }
+.header__burger-open-svg{
+    fill: $second-logo-color;
+    width: 40px;
+    height: 40px;
+}
 .header__menu-close-icon{
     position: absolute;
     top: 10px;
@@ -145,6 +151,8 @@
     border: none;
     margin-left: auto;
     padding: 0;
+    width: 40px;
+    height: 40px;
 }
 .header__menu-open,
 .header__menu-close-icon{
@@ -164,6 +172,11 @@
     width: 100%;
     justify-content: space-between;
 }
+.header__mobile-nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 .header__mobile-nav-link{
     font-weight: 500;
     font-size: 40px;
@@ -178,6 +191,45 @@
         color: $hover-color;
     }
 }
+.header__mobile-contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+.header__mobile-contacts-tel{
+    font-weight: 500;
+    font-size: 28px;
+    color: $text-color;
+    transition-duration: 250ms;
+    animation-timing-function: $time-function;
+
+    &:hover,
+    &:focus{
+        color: $hover-color;
+    }
+}
+.header__mobile-contacts-mail{
+    font-weight: 500;
+    font-size: 20px;
+    color: $text-color;
+    transition-duration: 250ms;
+    animation-timing-function: $time-function;
+
+    &:hover,
+    &:focus{
+        color: $hover-color;
+    }
+}
+.header__mobile-socials-list{
+    display: flex;
+    justify-content: space-between;
+}
+.header__mobile-socials-link{
+    font-weight: 500;
+    font-size: 14px;
+    color: $hover-color;
+}
 
 
 
@@ -186,19 +238,40 @@
 
 
 
-
-
+@media screen and (min-width: 480px){
+    .header__mobile-contacts-tel{
+        font-size: 34px;
+    }
+    .header__mobile-contacts-mail{
+        font-size: 24px;
+    }
+    .header__mobile-socials-link{
+        font-size: 18px;
+    }
+}
 @media screen and (min-width: 768px){
+    .header__site-nav-link.current::after{
+        bottom: -46.7px;
+    }
     .header__site-nav{
         display: flex;
     }
     .header__contacts{
         display: flex;
+        flex-direction: column;
     }
     .header__menu-open{
         display: none;
     }
     .header__menu-container{
         display: none;
+    }
+}
+@media screen and (min-width: 1200px){
+    .header__contacts{
+        flex-direction: row;
+    }
+    .header__site-nav-link.current::after{
+        bottom: -31.7px;
     }
 }
