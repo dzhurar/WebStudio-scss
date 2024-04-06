@@ -457,7 +457,7 @@ button {
 }
 
 .hero__close-modal {
-  margin-left: 490px;
+  margin-left: 250px;
   margin-right: 8px;
   margin-top: 8px;
   width: 30px;
@@ -505,18 +505,19 @@ button {
 }
 
 .hero__modal-form {
-  width: 448px;
-  margin: 40px;
+  width: 290px;
+  padding: 20px;
 }
 
 .hero__modal-form-title {
   color: #212121;
   text-align: center;
   margin-top: -43px;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
+  line-height: 150%;
   letter-spacing: 0.6px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .hero__modal-form-field {
@@ -561,9 +562,9 @@ button {
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px 16px;
   margin-bottom: 20px;
-  max-width: 416px;
+  max-width: 250px;
   max-height: 200px;
-  min-width: 416px;
+  min-width: 250px;
   min-height: 96px;
 }
 
@@ -602,7 +603,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.96px;
   line-height: 187.5%;
-  margin: 0 125px;
+  margin: 0 25px;
   padding: 10px 52px;
   background-color: #2196F3;
   border-radius: 4px;
@@ -611,6 +612,31 @@ button {
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (min-width: 480px) {
+  .hero__modal-form {
+    width: 450px;
+    padding: 40px;
+  }
+  .hero__modal {
+    width: 450px;
+  }
+  .hero__close-modal {
+    margin-left: 412px;
+  }
+  .hero__modal-form-textarea {
+    max-width: 370px;
+    min-width: 370px;
+  }
+  .hero__agree-button {
+    margin: 0 90px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__modal-form {
+    width: 450px;
+    padding: 40px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
@@ -623,8 +649,22 @@ button {
   .hero__button {
     padding: 10px 32px;
   }
-  .her__modal {
+  .hero__modal-form {
     width: 528px;
+    padding: 40px;
+  }
+  .hero__modal {
+    width: 528px;
+  }
+  .hero__close-modal {
+    margin-left: 490px;
+  }
+  .hero__modal-form-textarea {
+    max-width: 448px;
+    min-width: 448px;
+  }
+  .hero__agree-button {
+    margin: 0 175px;
   }
 }
 .advantages {
