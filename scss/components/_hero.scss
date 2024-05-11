@@ -2,11 +2,19 @@
     background-color: $pouring-color;
     padding-top: 118px;
     padding-bottom: 118px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../img/hero.webp);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/img/mobile/mobile-hero-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+@media (min-device-pixel-ratio: 2), 
+        (-webkit-min-device-pixel-ratio: 2), 
+        (min-resolution: 192dpi), 
+        (min-resolution: 2dppx) { 
+        .hero{ 
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/img/mobile/mobile-hero-background-2x.png);
+        } 
+} 
 .hero__title{
     font-size: 26px;
     color: $opposite-color;
@@ -222,13 +230,33 @@
         width: 450px;
         padding: 40px;
     }
+    .hero{ 
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/img/tablet/tablet-hero-background.png);
+    } 
+    @media (min-device-pixel-ratio: 2), 
+        (-webkit-min-device-pixel-ratio: 2), 
+        (min-resolution: 192dpi), 
+        (min-resolution: 2dppx) { 
+        .hero{ 
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/img/tablet/tablet-hero-background-2x.png);
+        } 
+} 
 }
 @media screen and (min-width: 1200px){
     .hero{
         padding-top: 200px;
         padding-bottom: 200px;
         background-size: contain;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/img/desktop/desktop-hero-background.png);
     }
+    @media (min-device-pixel-ratio: 2), 
+        (-webkit-min-device-pixel-ratio: 2), 
+        (min-resolution: 192dpi), 
+        (min-resolution: 2dppx) { 
+        .hero{ 
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/img/desktop/desktop-hero-background-2x.png);
+        } 
+} 
     .hero__title{
         font-size: 44px;
     }
